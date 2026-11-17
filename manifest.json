@@ -1,0 +1,24 @@
+{
+  "name": "AviPdf - 100% Offline PDF & Image Studio",
+  "short_name": "AviPdf",
+  "description": "100% client-side offline PDF and image toolkit. Merge, split, convert JPG to PDF, extract images, and unlock PDFs locally with zero server uploads.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#090b0f",
+  "theme_color": "#ea580c",
+  "orientation": "any",
+  "icons": [
+    {
+      "src": "icons/icon.svg",
+      "sizes": "192x192 512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": [
+    "productivity",
+    "utilities"
+  ]
+}
+
