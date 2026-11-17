@@ -1,0 +1,10 @@
+# OS & Editor artifacts
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Node & Temp files
+node_modules/
+npm-debug.log
+*.tmp

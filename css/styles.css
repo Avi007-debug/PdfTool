@@ -1,0 +1,115 @@
+/* =====================================================================
+   AviPdf - Local converter | Stylesheet
+   Tailwind extensions, Theme variables, Dropzone gradients & UI animations
+   ===================================================================== */
+
+/* Theme Variables & Smooth Surface Transitions */
+:root {
+    --hero-bg: radial-gradient(circle at 15% 20%, #fff1ee 0%, #f8fafc 45%, #fff7ed 100%);
+    --card-surface: #ffffff;
+    --border-subtle: #e2e8f0;
+}
+
+html.dark {
+    --hero-bg: radial-gradient(circle at 20% 15%, rgba(249, 115, 22, 0.14) 0%, #090b0f 55%, #0f1218 100%);
+    --card-surface: #161b24;
+    --border-subtle: #2d3748;
+}
+
+.hero-surface {
+    background: var(--hero-bg);
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+::-webkit-scrollbar-thumb {
+    background: rgba(148, 163, 184, 0.45);
+    border-radius: 9999px;
+}
+html.dark ::-webkit-scrollbar-thumb {
+    background: rgba(249, 115, 22, 0.35);
+}
+
+/* Mobile Touch & Tap Highlights */
+* {
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* SortableJS Drag & Drop Visuals */
+.sortable-ghost {
+    opacity: 0.35;
+    transform: scale(0.96);
+    border: 2px dashed #f97316 !important;
+}
+.sortable-drag {
+    cursor: grabbing !important;
+    box-shadow: 0 20px 30px -10px rgba(0, 0, 0, 0.35) !important;
+}
+
+/* Tool Directory Card Hover Elevation */
+.tool-dir-card {
+    transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.tool-dir-card:hover {
+    transform: translateY(-4px);
+}
+
+/* Smallpdf-Inspired Vibrant Dropzones */
+.smallpdf-dropzone-amber {
+    background: linear-gradient(135deg, #e69900 0%, #f59e0b 100%);
+}
+html.dark .smallpdf-dropzone-amber {
+    background: linear-gradient(135deg, #9a3412 0%, #ea580c 55%, #f97316 100%);
+    box-shadow: 0 20px 45px -15px rgba(249, 115, 22, 0.28);
+}
+
+.smallpdf-dropzone-red {
+    background: linear-gradient(135deg, #e5322d 0%, #f97316 100%);
+}
+html.dark .smallpdf-dropzone-red {
+    background: linear-gradient(135deg, #991b1b 0%, #ea580c 60%, #f97316 100%);
+    box-shadow: 0 20px 45px -15px rgba(249, 115, 22, 0.28);
+}
+
+.smallpdf-dropzone-purple {
+    background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+}
+html.dark .smallpdf-dropzone-purple {
+    background: linear-gradient(135deg, #7c2d12 0%, #c2410c 50%, #f97316 100%);
+    box-shadow: 0 20px 45px -15px rgba(249, 115, 22, 0.28);
+}
+
+.smallpdf-dropzone-teal {
+    background: linear-gradient(135deg, #0d9488 0%, #10b981 100%);
+}
+html.dark .smallpdf-dropzone-teal {
+    background: linear-gradient(135deg, #7c2d12 0%, #d97706 55%, #f97316 100%);
+    box-shadow: 0 20px 45px -15px rgba(249, 115, 22, 0.28);
+}
+
+.smallpdf-dropzone-orange {
+    background: linear-gradient(135deg, #ea580c 0%, #f97316 100%);
+}
+html.dark .smallpdf-dropzone-orange {
+    background: linear-gradient(135deg, #9a3412 0%, #ea580c 55%, #fb923c 100%);
+    box-shadow: 0 20px 45px -15px rgba(249, 115, 22, 0.32);
+}
+
+/* Paper Sheet Shadows */
+.paper-shadow {
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.16), 0 0 1px rgba(0, 0, 0, 0.2);
+}
+
+/* Mobile Safe Areas for PWA */
+@supports (padding: env(safe-area-inset-bottom)) {
+    footer {
+        padding-bottom: calc(1.5rem + env(safe-area-inset-bottom));
+    }
+}
+
